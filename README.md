@@ -1,6 +1,6 @@
 # Exploring ROS2: Simulation-Based Examples for Robotics Projects
 
-**Please make sure to set up your computer environment before the workshop if you plan to follow the hands-on session and try it yourself during the workshop. [Please test your setup](#ros2-tutorial-setup)**
+**Please make sure to set up your computer environment before the workshop if you plan to follow the hands-on session and try it yourself during the workshop. [Please test your setup](#running-this-tutorial-with-Docker-image)**
 
 
 ## Overview
@@ -84,7 +84,7 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
 
-## [Running this tutorial with Docker Image](#ros2-tutorial-setup)
+## Running this tutorial with Docker Image
 
 1. Pull the Docker image for tutorial
 
