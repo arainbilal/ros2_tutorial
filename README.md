@@ -1,13 +1,13 @@
 # Exploring ROS2: Simulation-Based Examples for Robotics Projects
 
-**Please make sure to set up your computer environment before the workshop if you plan to follow the hands-on session and try it yourself during the workshop.**
+**Please make sure to set up your computer environment before the workshop if you plan to follow the hands-on session and try it yourself during the workshop. [Please test your setup](#ros2_tutorial_setup)**
 
 
 ## Overview
 The workshop is designed to provide an interactive and hands-on learning experience focused on ROS2, particularly the creation of basic ROS2 programs, topics, services, and actions. Attendees will explore a typical mapping and navigation application in ROS2, demonstrating how simulations can be translated into real-world applications. The workshop will also highlight the key differences between ROS1 and ROS2, offer insights into simulation prototypes within virtual environments, and introduce the foundational architecture of ROS2. Additionally, participants will learn about available resources for further exploration and mastery of ROS2.
 
 ## Speaker details
-Dr. Bilal Arain is an Assistant Professor at the Department of Computer Engineering at the (University of Sharjah)[https://www.sharjah.ac.ae/Academics/Faculty-And-Staff/Bilal-Ahmed-Arain]. He received his PhD in Electrical Engineering from the University of New South Wales, Australia. He was a Postdoctoral Fellow at the Commonwealth Scientific and Industrial Research Organization and the Queensland University of Technology in Brisbane, Australia. During this period, he also worked in Australia's mining and precision agriculture industries. His research focuses on addressing practical problems in robotics, specifically emphasizing visual robot perception, unmanned system navigation, and control.
+Dr. Bilal Arain is an Assistant Professor at the Department of Computer Engineering at the [University of Sharjah](https://www.sharjah.ac.ae/Academics/Faculty-And-Staff/Bilal-Ahmed-Arain). He received his PhD in Electrical Engineering from the University of New South Wales, Australia. He was a Postdoctoral Fellow at the Commonwealth Scientific and Industrial Research Organization and the Queensland University of Technology in Brisbane, Australia. During this period, he also worked in Australia's mining and precision agriculture industries. His research focuses on addressing practical problems in robotics, specifically emphasizing visual robot perception, unmanned system navigation, and control.
 
 ## Need Help? Open an Issue
 1. Go to the Issues tab of this repository.
@@ -84,7 +84,7 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ```
 
-## Running this tutorial with Docker Image
+## [Running this tutorial with Docker Image](#ros2_tutorial_setup)
 
 1. Pull the Docker image for tutorial
 
@@ -92,7 +92,31 @@ This message shows that your installation appears to be working correctly.
 docker pull arainbilal/ros2_tutorial:no_nvidia
 ``` 
 
-2. 
+2. Run the image 
+
+```
+./run.bash arainbilal/ros2_tutorial:no_nvidia --no-nvidia
+```
+
+3. Test your image 
+
+```
+source /opt/ros/humble/setup.bash
+ros2 topic list
+```
+
+You should be able to see 
+
+```
+/parameter_events
+/rosout
+```
+
+4. Test visulaization tools
+
+```
+rviz2
+```
 
 ------------------------------------------------------------------------------------------------------------------------------
 # References
