@@ -86,16 +86,33 @@ This message shows that your installation appears to be working correctly.
 
 ## Running this tutorial with Docker Image
 
-1. Pull the Docker image for tutorial
+1. Pull the Docker image for tutorial 
+
++ If no GPU available on your system, use the following command:
 
 ```
 docker pull arainbilal/ros2_tutorial:no_nvidia
 ``` 
 
++ If GPU is available on your system, use the following command: 
+
+```
+docker pull arainbilal/ros2_tutorial:nvidia
+```
+
 2. Run the image 
+
+
++ If no GPU available on your system, use the following command:
 
 ```
 ./run.bash arainbilal/ros2_tutorial:no_nvidia --no-nvidia
+```
+
++ If GPU is available on your system, use the following command: 
+
+```
+/run.bash arainbilal/ros2_tutorial:nvidia
 ```
 
 3. Test your image 
@@ -112,6 +129,29 @@ You should be able to see
 /rosout
 ```
 
+If you are using the image `arainbilal/ros2_tutorial:nvidia`, then use command `nvidia-smi` inside the docker container and you should be able to see similar to the following:
+
+```
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.256.02   Driver Version: 470.256.02   CUDA Version: N/A      |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA GeForce ...  Off  | 00000000:01:00.0  On |                  N/A |
+|  0%   57C    P0    23W / 120W |    380MiB /  5936MiB |      2%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+
+```
+
 4. Test visulaization tools
 
 ```
@@ -120,5 +160,6 @@ rviz2
 
 ------------------------------------------------------------------------------------------------------------------------------
 # References
-[1](https://github.com/osrf/subt/wiki/Docker-Install)
-[2](https://docs.docker.com/engine/install/ubuntu/)
+
+[Open Source Robotics Foundation Docker Help](https://github.com/osrf/subt/wiki/Docker-Install)
+[Ubuntu Docker Install Help](https://docs.docker.com/engine/install/ubuntu/)
